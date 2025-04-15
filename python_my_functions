@@ -1,0 +1,93 @@
+
+venecky = [1, 2, 4, 1, 6, 0, 1] 
+
+print(venecky[1])
+print(venecky[:3])
+
+#Jak můžeme změnit předposlední hodnotu seznamu venecky na 5?
+
+#venecky = [1, 2, 4, 1, 6, 0, 1]
+venecky[-2] = 5
+print(venecky)
+
+
+#Jaký typ chyby způsobí příkaz venecky[10]? 
+#IndexError: list index out of range
+#print(venecky[10])
+
+
+inzerat = "Hledáme nové talenty do týmu TechStream!"
+inzerat = inzerat.replace("TechStream", "NextGen Innovations")
+print(inzerat)
+
+jen_cisla = "10"
+print(jen_cisla.isdecimal())
+
+"""
+filmy = [
+    "Čtyři svatby a jeden Python",
+    "Pán Pythonů: Návrat Soustruha",
+    "Rychle a Python",
+    "Harry Potter a Kámen Pythonů",
+    "Forrest Python"
+]
+
+cislo_filmu = int(input("Zadej číslo filmu: "))
+
+if 0 <= cislo_filmu < len(filmy):
+    print(filmy[cislo_filmu])
+else:
+    print("Tolik filmů nemáme")
+"""
+
+mesta = "Praha, Plzeň, Brno, Ostrava, Liberec"
+seznam_mest = mesta.split(", ")
+print(mesta)
+print(seznam_mest)
+
+#definice
+def vynasob_cislo_deseti(cislo):
+    return cislo * 10
+print(vynasob_cislo_deseti(5))
+
+def spocitej_cenu(cena_za_kus, kusy, postovne):
+    cena = cena_za_kus * kusy + postovne
+    return cena
+cena = spocitej_cenu(250, 3, 90)
+print(cena)
+
+def vypocitej_slevu(kod):
+    kod = kod.lower()
+    if kod == "mam rada javu":
+        return 5
+    elif kod == "mam rada python":
+        return 30
+    else:
+        return 0
+print(vypocitej_slevu("mam rada python"))
+
+def kofein_za_den(pocet_espresso, pocet_filtrovana=0):
+    return pocet_espresso * 75 + pocet_filtrovana * 150
+
+# volání funkce mimo definici
+print(kofein_za_den(3))
+
+def kofein_za_den_x(pocet_espresso: int, pocet_filtrovana: int = 0) -> int:
+    return pocet_espresso * 75 + pocet_filtrovana * 150
+print(kofein_za_den_x(4.4,8))
+
+def kontrola_emailu(email: str) -> bool:
+    if "@" in email:
+        return True
+    else:
+        return False
+print(kontrola_emailu("tereza@email.cz"))   # Vytiskne: True
+print(kontrola_emailu("terezaemail.cz"))    # Vytiskne: False
+
+def spocitej_cenu(cena_za_kus, kusy, postovne):
+    return cena_za_kus * kusy + postovne
+
+# s poštovným
+print(spocitej_cenu(cena_za_kus=100, postovne=90, kusy=5))  # Výstup: 380
+
+    
