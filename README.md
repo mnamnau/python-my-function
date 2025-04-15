@@ -10,9 +10,4 @@ This repository contains basic Python functions created as part of programming p
 
 - Python 3.x
 
-## How to Run
 
-You can run the script using:
-
-```bash
-python funkce.py
